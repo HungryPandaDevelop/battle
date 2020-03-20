@@ -1,0 +1,101 @@
+.circle-btn {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  color: $mainColor;
+  border: 1px solid $mainColor;
+  border-radius: 100%;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+
+  div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    background: $mainColor;
+    color: $whiteColor;
+  }
+
+  span {
+    margin: auto;
+  }
+
+}
+
+.close-ico {
+  //(PE-- W, H, L, T, LR, TB, Z, D, P)
+  @include positionElement(30px, 30px, 0, 0, right);
+  @include bgImageEl(url("../images/ico-close.svg"));
+  margin: 30px;
+  cursor: pointer;
+  transition: ease-out 0.25s;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+
+.link-more {
+  position: relative;
+  text-decoration: none;
+  padding: 0 30px;
+  font-family: "semibold";
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: $whiteColor;
+    top: 0;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  span {
+    font-family: "semibold";
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: $yellowColor;
+
+    &:before,
+    &:after {
+      background: $yellowColor;
+    }
+  }
+
+}
+
+.pagination {
+  text-align: center;
+
+  a {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    line-height: 1.8;
+    text-decoration: none;
+    margin: 0 15px;
+
+    &:hover,
+    &.active {
+      background: $yellowColor;
+      color: $whiteColor;
+    }
+  }
+}

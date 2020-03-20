@@ -1,0 +1,15 @@
+footer {
+  @include positionElement(100%, auto, 0, 0, left, bottom, 3);
+  color: $whiteColor;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  &.footer-white {
+    color: $mainColor;
+  }
+}

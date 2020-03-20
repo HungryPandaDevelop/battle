@@ -1,0 +1,32 @@
+doctype html
+html
+	body
+		// head
+		include partials/head.pug 
+		// head
+
+		// header
+		include partials/header-white.pug
+		// header
+
+
+		
+		// main-section
+
+		.catalog-page 
+		
+			// ---------- circle
+			include catalog/circle-catalog.pug
+			// ---------- circle
+
+			.stub
+			.catalog-container.main-grid
+				each val in [1,1,1,1,1,1]
+					include catalog/item-catalog.pug
+
+		// main-section
+		
+		// footer
+		include partials/footer-white.pug
+		// footer
+

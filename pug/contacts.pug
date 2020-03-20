@@ -1,0 +1,72 @@
+doctype html
+html
+	body
+		// head
+		include partials/head.pug 
+		// head
+
+		// header
+		include partials/header-white.pug
+		// header
+		
+		// main-section
+
+		.contacts-page 
+		
+			// ---------- circle
+			include catalog/circle-catalog.pug
+			// ---------- circle
+
+			.stub
+			h1 Контактная информация
+
+			.contacts-container
+				.contacts-item
+					h3 Адрес:
+					div 
+						|м. Третьяковская
+						br
+						|Большой Толмачёвский пер., 4
+				.contacts-item
+					h3 Контакты
+					div 
+						|+7 (495) 777-51-90
+						br
+						|+7 (495) 777-51-95
+				.contacts-item
+					h3 Режим работы:
+					div 
+						|Пн - Пт: 9.30 - 19.00
+						br
+						|Сб - Вс: выходные
+			.contacts-address
+				.contacts-address-line(
+					id="address-0"
+					data-coord-x="55.6"
+					data-coord-y="37.6" 
+					data-index="0"	
+				)
+					.address
+						.metro Магазин
+						.text-address м. Китай-город, Лубянский пр., 15, стр. 4
+					.phone-feedback
+						div +7 (499) 938-83-51
+				.contacts-address-line(
+					id="address-1"
+					data-coord-x="55.5"
+					data-coord-y="37.5" 
+					data-index="1"	
+				)
+					.address
+						.metro Магазин
+						.text-address м. Китай-город, Лубянский пр., 15, стр. 6
+					.phone-feedback
+						div +7 (499) 938-83-51
+			.map-container
+				#map
+		// main-section
+		
+		// footer
+		include partials/footer-white.pug
+		// footer
+

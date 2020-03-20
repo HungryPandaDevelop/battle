@@ -1,0 +1,138 @@
+.popup-wrap {
+  @include positionElement(100%, 100%, 0, 100%, left, top, 3);
+
+  &.show {
+    top: 0;
+  }
+}
+
+.chef-popup {
+  @include positionElement(50%, 100%, 50%, 100%, left, top, 4);
+  background: $whiteColor;
+  color: $mainColor;
+  padding: 150px 30px 30px;
+  overflow-y: auto;
+  transition: ease-out 0.25s;
+
+  &.show {
+    top: 0;
+  }
+
+  .chef-name {
+    font-family: inherit;
+    display: inline-block;
+    padding-right: 10px;
+
+
+  }
+
+  .rating {
+    display: inline-block;
+    padding: 0 15px;
+  }
+
+  .chef-name,
+  .rating {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .video-container {
+    margin-top: 80px;
+    width: 100%;
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+
+  .item {
+    color: $secondColor;
+
+    h3 {
+      padding: 80px 0 60px;
+      font-size: inherit;
+      font-family: "regular";
+      color: $mainColor;
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      background: $secondColor;
+      margin: 90px -30px 0;
+      border: 0;
+
+    }
+
+    .units-list {
+      &:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        clear: both;
+        height: 0;
+      }
+
+      li {
+        width: 50%;
+        float: left;
+        margin: 0 0 60px;
+        padding-right: 50px;
+      }
+    }
+
+
+  }
+
+
+}
+
+.video_list-container {
+
+  .list-item {
+    margin: 0 0 60px;
+
+    &:after {
+      content: " ";
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      clear: both;
+      height: 0;
+    }
+  }
+
+  .img-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+
+    img {
+      @include boxSchemeImgFull();
+    }
+
+    i {
+      @include positionElement(15px, 15px, 50%, 50%);
+      @include bgImageEl(url("../images/ico-play-mini.svg"));
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .description {
+    float: left;
+    padding-top: 10px;
+
+    h4 {
+      color: $mainColor;
+      font-size: inherit;
+      margin: 15px 0;
+    }
+  }
+}

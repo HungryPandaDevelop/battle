@@ -1,0 +1,197 @@
+$mainColor: #3E3E3E;
+$secondColor: #A5A5A5;
+$whiteColor: #ffffff;
+$blackColor: #333333;
+$yellowColor: #D4AF93;
+
+$bgColorFirst: #EFEFEF;
+
+$contentSize: 16px;
+
+$middleSize: 84px;
+$largeSize: 124px;
+
+$mainTitleSize: 48px;
+
+$secondTitleSize: 34px;
+$secondTitleSizeSmall: 24px;
+
+
+//(PE-- W, H, L, T, LR, TB, Z, D, P)
+@mixin positionElement($w:100%, $h:auto, $LrPos:0, $TbPos:0, $LeftRight:left, $TopBottom:top, $z:auto, $display: block, $pos: absolute) {
+	width: $w;
+	height: $h;
+
+	@if $LeftRight==left {
+		left: $LrPos;
+	}
+
+	@else {
+		right: $LrPos;
+	}
+
+	@if $TopBottom==top {
+		top: $TbPos;
+	}
+
+	@else {
+		bottom: $TbPos;
+	}
+
+	position: $pos;
+
+	display: $display;
+
+	z-index: $z;
+
+}
+
+
+
+@mixin boxSchemeImgFull() {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+}
+
+
+@mixin bgImageEl($img:none, $s:contain, $p:center, $r:no-repeat) {
+	background-position: $p;
+	background-repeat: $r;
+	background-size: $s;
+	background-image: $img;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: "regular";
+	color: $mainColor;
+	font-size: $contentSize;
+	min-width: 320px;
+	min-height: 640px;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+
+}
+
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+a {
+	color: inherit;
+	display: inline-block;
+
+	&:hover {}
+}
+
+.ln,
+.ln li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.custom-disk {
+	li {
+		padding-left: 15px;
+		position: relative;
+
+		&:before {
+			content: "";
+			//(PE-- W, H, L, T, LR, TB, Z, D, P)
+			@include positionElement(4px, 4px, 0, 8px);
+			background: $secondColor;
+			border-radius: 100%;
+		}
+	}
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-cover {
+	position: relative;
+}
+
+.img-cover img {
+	@include boxSchemeImgFull();
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-family: "semibold";
+	margin: 0;
+	padding: 0;
+	line-height: 1.1;
+}
+
+
+h1 {
+	font-size: $mainTitleSize;
+	margin: 0px 0 0px;
+	text-align: center;
+}
+
+h2 {
+	font-size: $mainTitleSize;
+}
+
+
+.main-grid {
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	grid-column-gap: 30px;
+	padding: 0 30px;
+}
+
+.social {
+	display: inline-block;
+	vertical-align: middle;
+
+	a {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin: 0 5px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.index {
+	//(PE-- W, H, L, T, LR, TB, Z, D, P)
+	@include positionElement(100%, 2000px);
+	background: url(../index-3.jpg) 0 0 no-repeat;
+	opacity: 0.6;
+	z-index: 3;
+	display: none;
+}
+
+//TODO: переиминовать итем на главной где цифры
+//TODO: размеры левого контейнера, италон - продуктс
+//TODO: H2 48px превратить в h2.global

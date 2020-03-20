@@ -1,0 +1,35 @@
+$mainTitleSize: 24px;
+$contentSize: 14px;
+$largeSize: 100px;
+
+//default
+body,
+html {
+  font-size: $contentSize;
+}
+
+//default
+
+
+// main-page
+
+.chef-1 .chef-name {
+  left: -10%;
+}
+
+.chef-2 .chef-name {
+  right: -2%;
+}
+
+
+h2 {
+  font-size: $mainTitleSize;
+}
+
+.slider .info-footer .large-num i,
+.circle_info-container .item i,
+.products-slider-hidden .num-container i {
+  font-size: $largeSize;
+}
+
+// main-page

@@ -1,0 +1,121 @@
+doctype html
+html
+	body
+		// head
+		include partials/head.pug 
+		// head
+
+		// header
+		include partials/header.pug
+		// header
+ 
+		// main-section
+		.main-page.green-page
+			.products-bg.products-bg-green.products-bg-0.active
+			.products-bg.products-bg-red.products-bg-1
+			.products-bg.products-bg-blue.products-bg-2
+			.products-bg.products-bg-purple.products-bg-3
+			.products-bg.products-bg-orange.products-bg-4
+			.products-bg.products-bg-grey.products-bg-5
+			.products-bg.products-bg-brown.products-bg-6
+			// ---------- product-popup
+			include products/product-popup.pug 
+			// ---------- product-popup
+
+
+			// ---------- front-slider
+			include products/front-slider.pug
+			// ---------- front-slider
+			.products-slider-hidden.fron_description-container.slider
+				.owl.owl-carousel.dn 
+					.item.flex-column
+						h2 Невероятная битва величайших мастеров
+						.large-num
+							i 3000
+							div 
+							| Вкусные шарики из отборного мяса для
+							br
+							| закусок, супов и вторых блюд
+					.item.flex-column
+						h2 Невероятная битва величайших мастеров
+						.large-num
+							i 3000
+							div 
+							| Вкусные шарики из отборного мяса для
+							br
+							| закусок, супов и вторых блюд
+					.item.flex-column
+						h2 Невероятная битва величайших мастеров
+						.large-num
+							i 3000
+							div 
+							| Вкусные шарики из отборного мяса для
+							br
+							| закусок, супов и вторых блюд
+			// ---------- circle
+			include products/circle-chef.pug
+			// ---------- circle
+
+			// ---------- move-circle
+			include products/move-circle.pug
+			// ---------- move-circle
+
+			.chef-layer.chef-layer-1.group-1
+				img(src="../images/chef-layer-1.png")
+			.chef-layer.chef-layer-2.group-1
+				img(src="../images/chef-layer-2.png")
+			.chef-layer.chef-layer-1.group-2
+				img(src="../images/chef-layer-1-1.png")
+			.chef-layer.chef-layer-2.group-2
+				img(src="../images/chef-layer-2-2.png")
+			.chef-front-info
+				h2 Из охлажденной свинины и говядины с зеленью 
+				div.line-1 Вкусные шарики из отборного мяса для закусок, супов и вторых блюд
+				div.line-2
+					img.img-balls(src="../images/img-balls.svg")
+				div.line-3
+					img.img-pan(src="../images/img-pan-0.svg") 
+				.pan-topic Варим
+		#fullpage
+			include products/all-layer.pug
+			.section
+			.section
+				.normal-section
+					.scroll-section
+						.stub
+						.recipes-page
+							h1 Рецепты онлайн
+							.recipes-row
+								// recipes row-header
+								include recipes/row-header.pug
+								// recipes row-header
+
+								// recipes item
+								include recipes/item.pug
+								// recipes item
+
+								// recipes item-right
+								include recipes/item-right.pug
+								// recipes item-right
+							
+							.recipes-row
+								// recipes row-header
+								include recipes/row-header.pug
+								// recipes row-header
+
+								// recipes item
+								include recipes/item.pug
+								// recipes item
+
+								// recipes item-right
+								include recipes/item-right.pug
+								// recipes item-right
+						.stub
+						// footer
+						include partials/footer.pug
+						// footer
+			.section
+		// main-section
+		
+	
+

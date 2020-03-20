@@ -1,0 +1,50 @@
+doctype html
+html
+	body.white-page
+		// head
+		include partials/head.pug 
+		// head
+
+		// header
+		include partials/header-white.pug
+		// header
+
+		// main-section
+		.stub
+		.recipes-page
+			h1 Рецепты онлайн
+			.recipes-row
+				// recipes row-header
+				include recipes/row-header-detail.pug
+				// recipes row-header
+
+				// recipes item
+				include recipes/item-detail.pug
+				// recipes item
+
+				// recipes item-right
+				include recipes/item-detail-right.pug
+				// recipes item-right
+		.reviews-section 
+			h2 Отзывы
+			.main-grid
+				// review item
+				include review/review-item.pug
+				// review item
+
+				// review item
+				include review/review-item.pug
+				// review item
+
+			// pagintaion
+			include partials/pagination-center.pug
+			// pagintaion 
+
+			// review-form
+			include review/review-form.pug
+			// review-form
+			.stub
+		// footer
+		include partials/footer-white.pug
+		// footer
+

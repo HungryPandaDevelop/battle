@@ -1,0 +1,134 @@
+.circle-front {
+  @include positionElement(300px, 300px, -150px, 50%, left, top, 3);
+  transform: translateY(-50%);
+  transition: ease-out 0.25s;
+  cursor: pointer;
+
+  a {
+    @include positionElement(100%, 100%, 0, 0, left, top, 2);
+  }
+
+  .circle-element {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    background: #8EAF33;
+    border-radius: 100%;
+    position: relative;
+    margin: 5%;
+
+  }
+
+  img {
+    object-fit: contain;
+
+    @include positionElement(60%, 60%, 60%, 20%);
+    transition: ease-out 0.25s;
+  }
+
+  &.active {
+    left: 0px;
+    width: 340px;
+    height: 340px;
+
+    img {
+      left: 20%;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.top {
+    transform: translateY(0%);
+    top: -240px;
+    left: 70%;
+    width: 240px;
+    height: 240px;
+    position: fixed;
+
+    &.visible {
+      top: -120px;
+    }
+
+    img {
+      top: 60%;
+      left: 20%;
+    }
+
+    &.active {
+      top: 0;
+
+      img {
+        left: 20%;
+        top: 20%;
+      }
+    }
+  }
+}
+
+.circle-link {
+  @include positionElement(240px, auto, 60%, 35px);
+  z-index: 2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.circle-content {
+  left: 18%;
+  padding-left: 45px;
+  transition: ease-out 0.25s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  h2 {
+    margin: 0 0 20px;
+  }
+}
+
+.links {
+  grid-row: 4;
+  padding-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+.num-container {
+  .num-item {
+    display: inline-block;
+    margin-right: 30px;
+    width: 20%;
+    position: relative;
+
+    i {
+      font-style: normal;
+      font-family: "semibold";
+      font-size: $middleSize;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      width: 100%;
+    }
+
+    div {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+}

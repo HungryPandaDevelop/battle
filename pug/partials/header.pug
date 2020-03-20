@@ -1,0 +1,16 @@
+header.main-grid
+  .logo
+    a(href="./index.html")
+      img(src="../images/logo.png")
+  nav
+    ul
+      each val,index in ["Предложить рецепт", "Рецепты онлайн", "О компании"]
+        li 
+          a(href="#")
+            = val 
+          if(index==0)
+            i.ico.ico-mail
+.logo-mobile
+    a(href="./index.html")
+      img(src="../images/logo.png")
+.hamburger 

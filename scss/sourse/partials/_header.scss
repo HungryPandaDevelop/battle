@@ -1,0 +1,78 @@
+header {
+  padding: 0px 0 0;
+  @include positionElement(100%);
+  z-index: 2;
+  color: $whiteColor;
+
+  &.header-white {
+    color: $mainColor;
+  }
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.logo {
+  max-width: 123px;
+  grid-column: 1/ span 2;
+  margin: 20px 0 0;
+
+  img {
+    width: 100%;
+  }
+
+  &.black {
+    display: none;
+  }
+}
+
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ico-mail {
+  width: 42px;
+  height: 42px;
+  @include bgImageEl(url("../images/ico-mail.svg"));
+  margin-left: 15px;
+
+  &.color {
+    @include bgImageEl(url("../images/ico-mail-color.svg"));
+  }
+}
+
+nav {
+  grid-column: 3/ span 15;
+  padding-top: 25px;
+
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul,
+  .menu-main-menu-container {
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 70px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.current_page_item a {
+  text-decoration: underline;
+}

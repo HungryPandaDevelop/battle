@@ -1,0 +1,69 @@
+$mainTitleSize: 32px;
+$largeSize: 130px;
+$middleSize: 58px;
+// main-page
+
+.chef-1 .chef-name {
+  left: -5%;
+}
+
+.chef-2 .chef-name {
+  right: 2%;
+}
+
+h2 {
+  font-size: $mainTitleSize;
+}
+
+.slider {}
+
+.num-container .num-item {
+  width: 30%;
+}
+
+.circle-front {
+  transform: scale(0.8) translateY(-50%);
+  transform-origin: top center;
+
+  &.active {
+    transform: scale(0.8) translateX(-15%) translateY(-50%);
+  }
+}
+
+.circle-front.top {
+  transform: scale(0.8) translateY(0%);
+  top: -120px;
+
+  &.active {
+    transform: scale(0.8) translateX(0%) translateY(0%);
+  }
+}
+
+.slider .info-footer .large-num i,
+.circle_info-container .item i,
+.products-slider-hidden .num-container i {
+  font-size: $largeSize;
+}
+
+// main-page
+// products
+.move-circle.move-circle-1 h3 {
+  font-size: $middleSize;
+}
+
+
+.move-circle.move-circle-2 h3,
+.move-circle.move-circle-3 h3,
+.move-circle .circle-inner h4 {
+  font-size: $mainTitleSize;
+}
+
+.move-circle .circle-inner img {
+  width: 60px;
+}
+
+.chef-front-info .img-balls {
+  margin-left: -60px;
+}
+
+// products

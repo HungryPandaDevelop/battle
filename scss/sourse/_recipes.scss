@@ -1,0 +1,364 @@
+.white-page {
+  color: $mainColor;
+}
+
+.stub {
+  height: 142px;
+}
+
+.recipes-row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.recipes-row-header {
+  text-align: center;
+  padding: 75px 0 50px;
+  position: relative;
+
+
+  h2,
+  .data,
+  .review-container {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-size: $secondTitleSize;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .time {
+    position: absolute;
+    text-align: center;
+    font-family: "semibold";
+    font-size: $secondTitleSize;
+    width: 100%;
+    top: 168px;
+
+  }
+
+  .data {
+    color: $secondColor;
+    margin: 0 0px 0 0;
+  }
+
+  h2 {
+    margin: 0 20px 0 17px;
+  }
+}
+
+.recipes-row-header-detail {
+  h2 {
+    display: block;
+    margin-bottom: 8px;
+
+  }
+
+  .time {
+    top: 210px;
+  }
+
+  .data {
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  .social {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+
+
+
+.recipes-item {
+  width: 50%;
+  float: left;
+  margin: 0 0 10px;
+  position: relative;
+
+  .recipes-item-header {
+    height: 110px;
+    text-align: right;
+    padding-right: 110px;
+
+    h3 {
+      font-size: $contentSize;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    &>* {
+      vertical-align: middle;
+    }
+
+    .mini-face {
+      width: 50px;
+      margin: 0 10px 0 15px;
+      border-radius: 100%;
+    }
+
+    .winner-ico {
+      width: 26px;
+      height: 26px;
+      @include bgImageEl(url("../images/ico-winner.svg"));
+    }
+  }
+}
+
+.like-container {
+  display: inline-block;
+
+  &>* {
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
+  span {
+    font-family: "semibold";
+  }
+
+  .ico {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .like-ico {
+    @include bgImageEl(url("../images/ico-like.svg"));
+  }
+
+  .dislike-ico {
+    @include bgImageEl(url("../images/ico-dislike.svg"));
+
+    &:hover {
+      background-image: url("../images/ico-dislike-red.svg");
+    }
+  }
+
+  .vline {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: $mainColor;
+  }
+}
+
+
+
+
+.recipes-item-body {
+  padding-left: 30px;
+  padding-right: 15px;
+  position: relative;
+  color: $whiteColor;
+
+  .view-container {
+    position: absolute;
+  }
+
+  .view-container {
+    bottom: 0;
+    right: 0;
+    margin: 30px 38px;
+
+
+    span {
+      font-family: "semibold";
+    }
+
+    .view-ico {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      @include bgImageEl(url("../images/ico-view.svg"));
+    }
+  }
+
+  .img-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 55.5%;
+    overflow: hidden;
+    border-radius: 55px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+
+  .link-more {
+    position: absolute;
+    left: 14%;
+    bottom: 0;
+    margin: 30px 0px;
+  }
+}
+
+.play-container {
+  position: absolute;
+  left: 14%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  color: $whiteColor;
+
+  span {
+    font-family: "semibold";
+  }
+
+  .play-ico {
+    width: 90px;
+    height: 90px;
+    @include bgImageEl(url("../images/ico-play.svg"));
+    margin-right: 18px;
+    display: inline-block;
+  }
+
+  span,
+  .play-ico {
+    vertical-align: middle;
+  }
+}
+
+.recipes-item-footer {
+  padding-left: 14%;
+  padding-right: 15px;
+  padding-top: 30px;
+}
+
+.recipes-item.right {
+  .recipes-item-header {
+    text-align: left;
+    padding-left: 110px;
+    padding-right: 0;
+  }
+
+  .recipes-item-body {
+    padding-left: 15px;
+    padding-right: 30px;
+  }
+
+}
+
+//-----top-banner-----
+.scroll-section .top-banner {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  top: 120px;
+  margin-bottom: 150px;
+}
+
+.top-banner {
+  padding: 0 30px;
+  @include positionElement(100%, 240px, 0, 90px, left, top, 2, block, fixed);
+  transition: ease 0.25s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .grid-banner {
+    background: #E8CAB5;
+    background: radial-gradient(circle, #E8CAB5 30%, #D4AF93 82%);
+    position: relative;
+    border-radius: 30px;
+    height: 100%;
+    overflow: hidden;
+    color: $whiteColor;
+    padding: 3.9% 40px 0 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .half.right {
+    text-align: right;
+  }
+
+  .close {
+    @include positionElement(30px, 30px, 0, 0, right);
+    margin: 20px;
+    cursor: pointer;
+    @include bgImageEl(url("../images/ico-close-white.svg"));
+  }
+
+  .rating {
+    font-size: $secondTitleSize;
+    padding: 0;
+    margin: 0;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    i {
+      margin-left: 15px;
+    }
+  }
+
+  .face-1 {
+    @include positionElement(22%, 120%, 16.6%, -10%);
+
+    img {
+      @include boxSchemeImgFull();
+    }
+  }
+
+  .face-2 {
+    @include positionElement(14%, 120%, 22%, -10%, right);
+
+    img {
+      @include boxSchemeImgFull();
+    }
+  }
+
+  .ico-win {
+    width: 80px;
+    height: 80px;
+    @include bgImageEl(url("../images/ico-winner-white.svg"));
+    margin: 0 10px;
+  }
+
+  .ico-lose {
+    width: 80px;
+    height: 80px;
+    @include bgImageEl(url("../images/ico-lose.svg"));
+    margin: 0 10px;
+  }
+
+  .name {
+    margin: 0 0 10px;
+  }
+
+  .ico-lose,
+  .ico-win,
+  .chef-box {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .ico-vs {
+    @include positionElement(150px, 250px, 50%, 50%);
+    transform: translateX(-50%) translateY(-50%);
+    @include bgImageEl(url("../images/ico-vs.png"));
+  }
+}

@@ -1,0 +1,13 @@
+header.main-grid.header-white
+  .logo
+    a(href="/")
+      img(src="../images/logo-black.png").black
+  nav
+    ul
+      each val,index in ["Предложить рецепт", "Рецепты онлайн", "О компании"]
+        li 
+          a(href="#")
+            = val 
+          if(index==0)
+            i.ico.ico-mail.color
+  .hamburger

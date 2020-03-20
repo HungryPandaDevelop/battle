@@ -1,0 +1,47 @@
+.contacts-page {
+  position: relative;
+
+  min-height: 650px;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  h1 {
+    text-align: left;
+    margin: 0 0 60px;
+  }
+}
+
+.contacts-container {
+  border-bottom: 1px solid $secondColor;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+
+  .contacts-item {
+    display: inline-block;
+    width: 31%;
+    color: $secondColor;
+
+    h3 {
+      color: $mainColor;
+      font-family: inherit;
+      margin: 0 0 15px;
+    }
+  }
+
+}
+
+.map-container {
+  max-width: 1640px;
+  margin: 0 auto;
+  height: 690px;
+  position: relative;
+}
+
+.contacts-address {
+  display: none;
+}
+
+#map {
+  @include positionElement(100%, 100%);
+}

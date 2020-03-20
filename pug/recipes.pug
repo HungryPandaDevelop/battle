@@ -1,0 +1,57 @@
+doctype html
+html
+	body.white-page
+		// head
+		include partials/head.pug 
+		// head
+
+		// header
+		include partials/header-white.pug
+		// header
+
+		// ---------- circle
+		.circle-front.top
+			.circle-element
+				img(src="../images/pack-1.png", alt="pack")
+		// ---------- circle
+
+	
+		// main-section
+		.stub
+
+		// ---------- top-banner
+		include recipes/top-banner.pug
+		// ---------- top-banner
+
+
+		.recipes-page
+			h1 Рецепты онлайн
+			.recipes-row
+				// recipes row-header
+				include recipes/row-header.pug
+				// recipes row-header
+
+				// recipes item
+				include recipes/item.pug
+				// recipes item
+
+				// recipes item-right
+				include recipes/item-right.pug
+				// recipes item-right
+			.recipes-row
+				// recipes row-header
+				include recipes/row-header.pug
+				// recipes row-header
+
+				// recipes item
+				include recipes/item.pug
+				// recipes item
+
+				// recipes item-right
+				include recipes/item-right.pug
+				// recipes item-right
+			.stub
+		// footer
+		include partials/footer-white.pug
+		// footer
+
